@@ -4,29 +4,59 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private bool isGrounded;
-    private bool isIdle;
+    private const float PLAYERSPEED = 2.5f;
+
+    private bool isRunning;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
-        isGrounded = false;
-        isIdle = true;
+        isRunning = false;
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += new Vector3(2f, 0) * Time.deltaTime;
-        }
+        /*RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 0.2f);
+
+        Debug.DrawRay(transform.position, transform.position - transform.up * 0.2f, Color.red);
+        Debug.Log(hit.collider.gameObject.name);
+
+        if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            Debug.Log(hit.collider.gameObject.layer);*/
+
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += new Vector3(-2f, 0) * Time.deltaTime;
+            transform.position += new Vector3(-PLAYERSPEED, 0) * Time.deltaTime;
+            spriteRenderer.flipX = true;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        { 
-            this.GetComponent<Rigidbody2D>().gravityScale *= -1;
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.position += new Vector3(PLAYERSPEED, 0) * Time.deltaTime;
+            spriteRenderer.flipX = false;
+        }
 
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            isRunning = true;
+            animator.SetBool("isRunning", isRunning);
+        }
+        else
+        {
+            isRunning = false;
+            animator.SetBool("isRunning", isRunning);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            this.GetComponent<Rigidbody2D>().gravityScale *= -1;
+            if (spriteRenderer.flipY)
+                spriteRenderer.flipY = false;
+            else
+                spriteRenderer.flipY = true;
         }
 
     }
