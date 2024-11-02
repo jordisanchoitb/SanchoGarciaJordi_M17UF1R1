@@ -27,6 +27,10 @@ public class PauseMenuEvents : MonoBehaviour
 
     public void GoMenu()
     {
+        Player.player = null;
+        Destroy(GameObject.Find("Player"));
+        GameManager.gameManager = null;
+        Destroy(GameObject.Find("GameManager"));
         SceneManager.LoadScene("MainMenu");
         AudioManager.audioManager.PlaySoundEffectLeave();
     }
