@@ -17,7 +17,7 @@ public class MainMenuEvents : MonoBehaviour
 
     public void AccessLevel1()
     {
-        SceneManager.LoadScene("FirstLevel");
+        SceneManager.LoadScene(1);
     }
 
     public void ExitGame()
