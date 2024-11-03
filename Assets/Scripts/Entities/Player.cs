@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +18,7 @@ public class Player : MonoBehaviour
     private RaycastHit2D currentraycastHit2D;
     private CapsuleCollider2D collider2D;
 
-    private void Awake()
+    private void Start()
     {
         if (Player.player == null)
         {
@@ -110,7 +109,8 @@ public class Player : MonoBehaviour
         animator.SetBool("isJump", isJumping);
         animator.SetBool("isRunning", isRunning);
 
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        this.GetComponent<Rigidbody2D>().gravityScale = 1;
+        spriteRenderer.flipY = false;
 
         if (!IsSpawnpointInCurrentLevel())
             SceneManager.LoadScene(GameManager.gameManager.GetCurrentSpawnpointLevel());
@@ -150,6 +150,12 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             Player.player.transform.position = GameManager.gameManager.scenePositions[SceneManager.GetActiveScene().buildIndex-2][1];
+        }
+
+        if (collision.gameObject.name == "Win")
+        {
+            Time.timeScale = 0;
+            SceneManager.LoadScene("WinMenu", LoadSceneMode.Additive);
         }
     }
 }

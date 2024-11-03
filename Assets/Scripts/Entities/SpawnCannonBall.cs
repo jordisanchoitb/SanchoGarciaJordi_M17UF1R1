@@ -5,10 +5,8 @@ using UnityEngine;
 public class SpawnCannonBall : MonoBehaviour
 {
     public static SpawnCannonBall spawner;
-    //private float time = 3f;
     public GameObject canonBall;
     public GameObject canonBallSpawnPoint;
-    //private Coroutine coroutine;
     private Stack<GameObject> canonBallPool;
 
     void Start()
@@ -17,7 +15,6 @@ public class SpawnCannonBall : MonoBehaviour
             Destroy(gameObject);
         SpawnCannonBall.spawner = this;
         canonBallPool = new Stack<GameObject>();
-        //coroutine = StartCoroutine(SpawnCanonBallRoutine());
     }
 
     public void Push(GameObject canonBall)
@@ -38,21 +35,6 @@ public class SpawnCannonBall : MonoBehaviour
     {
         return canonBallPool.Peek();
     }
-
-    /*private IEnumerator SpawnCanonBallRoutine()
-    {
-        if (canonBallPool.Count != 0)
-        {
-            this.Pop();
-        }
-        else
-        {
-            Instantiate(canonBall, canonBallSpawnPoint.transform.position, Quaternion.identity);
-        }
-
-        yield return new WaitForSeconds(time);
-        yield return SpawnCanonBallRoutine();
-    }*/
 
     private void ShotBall()
     {

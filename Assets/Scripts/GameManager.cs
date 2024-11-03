@@ -16,22 +16,12 @@ public class GameManager : MonoBehaviour
         new List<Vector3> { new Vector3(0, 0), new Vector3(8.8f, -3.99f) },
         new List<Vector3> { new Vector3(-8.8f, -4.06f), new Vector3(8.8f, -4.06f) },
         new List<Vector3> { new Vector3(-8.8f, -4.06f), new Vector3(8.8f, -4.06f) },
-        new List<Vector3> { new Vector3(-8.8f, -4.06f), new Vector3(8.8f, -4.06f) }
+        new List<Vector3> { new Vector3(-8.8f, -4.06f), new Vector3(8.8f, -4.06f) },
+        new List<Vector3> { new Vector3(-8.8f, -4.06f), new Vector3(0, 0) }
     };
 
-    private void Awake()
+    private void Start()
     {
-        /*Debug.Log("GameManager Awake");
-        if (GameManager.gameManager != null && GameManager.gameManager != this)
-        {
-            Debug.Log("GameManager already exists, destroying this instance");
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(this);
-        GameManager.gameManager = this;
-        this.currentSpawnpoint = GameObject.Find("Player").transform.position;
-        this.currentSpawnpointLevel = 1;*/
-
         if (GameManager.gameManager == null)
         {
             DontDestroyOnLoad(gameObject);

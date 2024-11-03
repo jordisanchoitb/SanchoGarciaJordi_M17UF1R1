@@ -9,13 +9,6 @@ public class AudioManager : MonoBehaviour
     private AudioSource mainSound, soundEffectDead, soundEffectLeave, soundEffectShotBall;
     void Start()
     {
-        /*if (AudioManager.audioManager != null && AudioManager.audioManager != this)
-            Destroy(gameObject);
-        DontDestroyOnLoad(this);
-        AudioManager.audioManager = this;
-        mainSound.Play();
-        soundEffectShotBall.volume = 0.1f;*/
-
         if (AudioManager.audioManager == null)
         {
             DontDestroyOnLoad(gameObject);

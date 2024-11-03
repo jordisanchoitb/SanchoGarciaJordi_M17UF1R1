@@ -32,4 +32,8 @@ public class WinMenuEvents : MonoBehaviour
         Destroy(GameObject.Find("GameManager"));
         SceneManager.LoadScene(1);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
