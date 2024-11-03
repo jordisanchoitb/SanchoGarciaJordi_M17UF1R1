@@ -21,7 +21,7 @@ Sprite Player by [**LuizMelo**](https://luizmelo.itch.io/)
 Sprite Enemy by [**Clembod**](https://clembod.itch.io/)
 
 #### Tiles
-Tiles by [**IoPn (Severant)**](iopn.itch.io)  
+Tiles by [**IoPn (Severant)**](https://iopn.itch.io)  
 
 Spikes by [**Robert Brooks**](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?page-name=Animated-floor-spikes-game-asset&item=1u5v5h4w8i7s7t806o)
 
@@ -33,4 +33,7 @@ Exit whitout win effect from [**Pixabay**](https://pixabay.com/es/sound-effects/
 Fire cannon ball effect by [**LordSonny from Pixabay**](https://pixabay.com/es/sound-effects/cannon-fire-161072/)
 
 Game Sound by [**Gaston A-P from Pixabay**](https://pixabay.com/es/sound-effects/game-music-loop-7-145285/)
+
+#### Img
+Imatge de fons en el menu principal by [**Freepik**](https://www.freepik.com/free-vector/medieval-castle-gate-dungeon-palace-exterior_21894149.htm)
 
