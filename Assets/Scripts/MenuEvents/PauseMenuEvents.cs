@@ -42,4 +42,11 @@ public class PauseMenuEvents : MonoBehaviour
         Destroy(GameObject.Find("GameManager"));
         SceneManager.LoadScene(1);
     }
+
+    public void ExitGame()
+    {
+        AudioManager.audioManager.PlaySoundEffectLeave();
+        Application.Quit();
+    }
 }
+

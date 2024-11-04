@@ -824,7 +824,7 @@ Transform:
   m_GameObject: {fileID: 1017222511}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.17, y: -1.3699999, z: 0}
+  m_LocalPosition: {x: 7.17, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 1069619248}
   - component: {fileID: 1069619247}
   - component: {fileID: 1069619246}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -898,8 +898,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26117dc7c9a21524799d35521f4a50b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMove: {fileID: 1017222511}
-  endMove: {fileID: 2025867216}
 --- !u!61 &1069619247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -932,7 +930,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.037559688, y: -0.1844308}
+  m_Offset: {x: -0.037559688, y: -0.17}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1448,7 +1446,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 18
   m_Sprite: {fileID: -1008862421, guid: 5ed0a9c3aa39e3e4cb71dfdfb4373d57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3476,7 +3474,7 @@ Transform:
   m_GameObject: {fileID: 2025867216}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5399995, y: -1.37, z: 0}
+  m_LocalPosition: {x: -3.5399995, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
